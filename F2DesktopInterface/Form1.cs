@@ -49,9 +49,34 @@ namespace F2DesktopInterface
             sideBarTimer.Start();
         }
 
+        private void CloseForms(Form form)
+        {
+            List<Form> list= new List<Form>();
+            list.Add(dashboardForm);
+            list.Add(consoleForm);
+            list.Add(filesForm);
+            list.Add(historyForm);
+            list.Add(manageForm);
+            list.Add(configurationForm);
+            list.Add(systemForm);
+
+            foreach(Form f in list)
+            {
+                if(form != f)
+                {
+                    if(f!=null)
+                    {
+                        f.Close();
+                    }
+                }
+            }
+
+        }
+
 
         private void DashBoardActivate()
         {
+            CloseForms(dashboardForm);
             if (dashboardForm == null)
             {
                 dashboardForm = new DashboardForm();
@@ -64,9 +89,19 @@ namespace F2DesktopInterface
             {
                 dashboardForm.Activate();
             }
+                pnDashboard.BackColor = SystemColors.ActiveBorder;
         }
+        private void DashboardForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            dashboardForm = null;
+            pnDashboard.BackColor = SystemColors.ControlLight;
+        }
+
+
         private void ConsoleActivate()
         {
+            
+            CloseForms(consoleForm);
             if (consoleForm == null)
             {
                 consoleForm = new ConsoleForm();
@@ -79,9 +114,18 @@ namespace F2DesktopInterface
             {
                 consoleForm.Activate();
             }
+            pnConsole.BackColor = SystemColors.ActiveBorder;
         }
+        private void consoleForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            consoleForm = null;
+            pnConsole.BackColor = SystemColors.ControlLight;
+        }
+
+
         private void FilesActivate()
         {
+            CloseForms(filesForm);
             if (filesForm == null)
             {
                 filesForm = new FilesForm();
@@ -94,9 +138,18 @@ namespace F2DesktopInterface
             {
                 filesForm.Activate();
             }
+            pnFiles.BackColor = SystemColors.ActiveBorder;
         }
+        private void FilesForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            filesForm = null;
+            pnFiles.BackColor = SystemColors.ControlLight;
+        }
+
+
         private void HistoryActivate()
         {
+            CloseForms(historyForm);
             if (historyForm == null)
             {
                 historyForm = new HistoryForm();
@@ -109,9 +162,18 @@ namespace F2DesktopInterface
             {
                 historyForm.Activate();
             }
+            pnHistory.BackColor = SystemColors.ActiveBorder;
         }
+        private void HistoryForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            historyForm = null;
+            pnHistory.BackColor = SystemColors.ControlLight;
+        }
+
+
         private void ManageActivate()
         {
+            CloseForms(manageForm);
             if (manageForm == null)
             {
                 manageForm = new ManageForm();
@@ -124,9 +186,18 @@ namespace F2DesktopInterface
             {
                 manageForm.Activate();
             }
+            pnManage.BackColor = SystemColors.ActiveBorder;
         }
+        private void ManageForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            manageForm = null;
+            pnManage.BackColor = SystemColors.ControlLight;
+        }
+
+
         private void ConfigurationActivate()
         {
+            CloseForms(configurationForm);
             if (configurationForm == null)
             {
                 configurationForm = new ConfigurationForm();
@@ -139,9 +210,18 @@ namespace F2DesktopInterface
             {
                 configurationForm.Activate();
             }
+            pnConfiguration.BackColor = SystemColors.ActiveBorder;
         }
+        private void ConfigurationForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            configurationForm = null;
+            pnConfiguration.BackColor = SystemColors.ControlLight;
+        }
+
+
         private void SystemActivate()
         {
+            CloseForms(systemForm);
             if (systemForm == null)
             {
                 systemForm = new SystemForm();
@@ -154,72 +234,44 @@ namespace F2DesktopInterface
             {
                 systemForm.Activate();
             }
+
+            pnSystem.BackColor = SystemColors.ActiveBorder;
         }
+        private void SystemForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            systemForm = null;
+            pnSystem.BackColor = SystemColors.ControlLight;
+        }
+
 
         private void pnDashboard_Click(object sender, EventArgs e)
         {
             DashBoardActivate();
         }
-
-        private void DashboardForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            dashboardForm = null;
-        }
-
         private void pnConsole_Click(object sender, EventArgs e)
         {
             ConsoleActivate();
         }
-        private void consoleForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            consoleForm = null;
-        }
-
         private void pnFiles_Click(object sender, EventArgs e)
         {
             FilesActivate();
-        }
-        private void FilesForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            filesForm = null;
-        }
-
+        }      
         private void pnHistory_Click(object sender, EventArgs e)
         {
             HistoryActivate();
         }
-        private void HistoryForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            historyForm = null;
-        }
-
         private void pnManage_Click(object sender, EventArgs e)
         {
             ManageActivate();
-        }
-        private void ManageForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            manageForm = null;
-        }
-
+        }      
         private void pnConfiguration_Click(object sender, EventArgs e)
         {
             ConfigurationActivate();
-        }
-        private void ConfigurationForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            configurationForm = null;
-        }
-
+        }      
         private void pnSystem_Click(object sender, EventArgs e)
         {
             SystemActivate();
-        }
-        private void SystemForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            systemForm = null;
-        }
-
+        }       
         private void Form1_Load(object sender, EventArgs e)
         {
             DashBoardActivate();

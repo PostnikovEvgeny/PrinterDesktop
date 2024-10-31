@@ -169,6 +169,7 @@
             // 
             // pnDashboard
             // 
+            pnDashboard.BackColor = SystemColors.ControlLight;
             pnDashboard.FlatStyle = FlatStyle.Flat;
             pnDashboard.Image = (Image)resources.GetObject("pnDashboard.Image");
             pnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
@@ -179,7 +180,7 @@
             pnDashboard.TabIndex = 0;
             pnDashboard.Text = "                  Панель управления";
             pnDashboard.TextAlign = ContentAlignment.MiddleLeft;
-            pnDashboard.UseVisualStyleBackColor = true;
+            pnDashboard.UseVisualStyleBackColor = false;
             pnDashboard.Click += pnDashboard_Click;
             // 
             // panel8
