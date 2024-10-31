@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
@@ -35,8 +36,10 @@
             выходToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem2 = new ToolStripMenuItem();
             руководствоПользователяToolStripMenuItem = new ToolStripMenuItem();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            sidebar = new FlowLayoutPanel();
             panel7 = new Panel();
+            label1 = new Label();
+            menuButton = new PictureBox();
             panel6 = new Panel();
             button1 = new Button();
             panel8 = new Panel();
@@ -56,8 +59,11 @@
             panel3 = new Panel();
             panel4 = new Panel();
             panel5 = new Panel();
+            sideBarTimer = new System.Windows.Forms.Timer(components);
             menuStrip1.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
+            sidebar.SuspendLayout();
+            panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)menuButton).BeginInit();
             panel6.SuspendLayout();
             panel8.SuspendLayout();
             panel9.SuspendLayout();
@@ -83,7 +89,6 @@
             toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Size = new Size(48, 20);
             toolStripMenuItem1.Text = "Файл";
-            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
             // 
             // сохранитьToolStripMenuItem
             // 
@@ -110,29 +115,54 @@
             руководствоПользователяToolStripMenuItem.Size = new Size(221, 22);
             руководствоПользователяToolStripMenuItem.Text = "Руководство пользователя";
             // 
-            // flowLayoutPanel1
+            // sidebar
             // 
-            flowLayoutPanel1.BackColor = SystemColors.ControlLight;
-            flowLayoutPanel1.Controls.Add(panel7);
-            flowLayoutPanel1.Controls.Add(panel6);
-            flowLayoutPanel1.Controls.Add(panel8);
-            flowLayoutPanel1.Controls.Add(panel9);
-            flowLayoutPanel1.Controls.Add(panel10);
-            flowLayoutPanel1.Controls.Add(panel11);
-            flowLayoutPanel1.Controls.Add(panel12);
-            flowLayoutPanel1.Controls.Add(panel13);
-            flowLayoutPanel1.Dock = DockStyle.Left;
-            flowLayoutPanel1.Location = new Point(0, 24);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(271, 717);
-            flowLayoutPanel1.TabIndex = 1;
+            sidebar.BackColor = SystemColors.ControlLight;
+            sidebar.Controls.Add(panel7);
+            sidebar.Controls.Add(panel6);
+            sidebar.Controls.Add(panel8);
+            sidebar.Controls.Add(panel9);
+            sidebar.Controls.Add(panel10);
+            sidebar.Controls.Add(panel11);
+            sidebar.Controls.Add(panel12);
+            sidebar.Controls.Add(panel13);
+            sidebar.Dock = DockStyle.Left;
+            sidebar.Location = new Point(0, 24);
+            sidebar.MaximumSize = new Size(271, 717);
+            sidebar.MinimumSize = new Size(81, 717);
+            sidebar.Name = "sidebar";
+            sidebar.Size = new Size(271, 717);
+            sidebar.TabIndex = 1;
             // 
             // panel7
             // 
+            panel7.Controls.Add(label1);
+            panel7.Controls.Add(menuButton);
             panel7.Location = new Point(3, 3);
             panel7.Name = "panel7";
             panel7.Size = new Size(268, 65);
             panel7.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(64, 25);
+            label1.Name = "label1";
+            label1.Size = new Size(56, 15);
+            label1.TabIndex = 1;
+            label1.Text = "     Меню";
+            // 
+            // menuButton
+            // 
+            menuButton.Cursor = Cursors.Hand;
+            menuButton.Image = (Image)resources.GetObject("menuButton.Image");
+            menuButton.Location = new Point(26, 20);
+            menuButton.Name = "menuButton";
+            menuButton.Size = new Size(26, 23);
+            menuButton.SizeMode = PictureBoxSizeMode.Zoom;
+            menuButton.TabIndex = 0;
+            menuButton.TabStop = false;
+            menuButton.Click += menuButton_Click;
             // 
             // panel6
             // 
@@ -152,10 +182,9 @@
             button1.Padding = new Padding(30, 0, 0, 0);
             button1.Size = new Size(299, 56);
             button1.TabIndex = 0;
-            button1.Text = "            Панель управления";
+            button1.Text = "                  Панель управления";
             button1.TextAlign = ContentAlignment.MiddleLeft;
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // panel8
             // 
@@ -175,7 +204,7 @@
             button2.Padding = new Padding(30, 0, 0, 0);
             button2.Size = new Size(299, 56);
             button2.TabIndex = 0;
-            button2.Text = "            Консоль";
+            button2.Text = "                  Консоль";
             button2.TextAlign = ContentAlignment.MiddleLeft;
             button2.UseVisualStyleBackColor = true;
             // 
@@ -197,7 +226,7 @@
             button3.Padding = new Padding(30, 0, 0, 0);
             button3.Size = new Size(299, 56);
             button3.TabIndex = 0;
-            button3.Text = "            Файлы";
+            button3.Text = "                  Файлы";
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = true;
             // 
@@ -219,7 +248,7 @@
             button4.Padding = new Padding(30, 0, 0, 0);
             button4.Size = new Size(299, 56);
             button4.TabIndex = 0;
-            button4.Text = "            История задач";
+            button4.Text = "                  История задач";
             button4.TextAlign = ContentAlignment.MiddleLeft;
             button4.UseVisualStyleBackColor = true;
             // 
@@ -241,7 +270,7 @@
             button5.Padding = new Padding(30, 0, 0, 0);
             button5.Size = new Size(299, 56);
             button5.TabIndex = 0;
-            button5.Text = "            Управление";
+            button5.Text = "                  Управление";
             button5.TextAlign = ContentAlignment.MiddleLeft;
             button5.UseVisualStyleBackColor = true;
             // 
@@ -263,7 +292,7 @@
             button6.Padding = new Padding(30, 0, 0, 0);
             button6.Size = new Size(299, 56);
             button6.TabIndex = 0;
-            button6.Text = "            Конфигурация";
+            button6.Text = "                  Конфигурация";
             button6.TextAlign = ContentAlignment.MiddleLeft;
             button6.UseVisualStyleBackColor = true;
             // 
@@ -285,7 +314,7 @@
             button7.Padding = new Padding(30, 0, 0, 0);
             button7.Size = new Size(299, 56);
             button7.TabIndex = 0;
-            button7.Text = "            Система";
+            button7.Text = "                  Система";
             button7.TextAlign = ContentAlignment.MiddleLeft;
             button7.UseVisualStyleBackColor = true;
             // 
@@ -329,6 +358,11 @@
             panel5.Size = new Size(200, 276);
             panel5.TabIndex = 4;
             // 
+            // sideBarTimer
+            // 
+            sideBarTimer.Interval = 10;
+            sideBarTimer.Tick += sideBarTimer_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -339,7 +373,7 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(sidebar);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
@@ -347,7 +381,10 @@
             Text = "Управление принтером F2-Lite";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            flowLayoutPanel1.ResumeLayout(false);
+            sidebar.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)menuButton).EndInit();
             panel6.ResumeLayout(false);
             panel8.ResumeLayout(false);
             panel9.ResumeLayout(false);
@@ -367,7 +404,7 @@
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem руководствоПользователяToolStripMenuItem;
         private ToolStripMenuItem выходToolStripMenuItem;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel sidebar;
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
@@ -388,5 +425,8 @@
         private Button button6;
         private Panel panel13;
         private Button button7;
+        private PictureBox menuButton;
+        private Label label1;
+        private System.Windows.Forms.Timer sideBarTimer;
     }
 }
