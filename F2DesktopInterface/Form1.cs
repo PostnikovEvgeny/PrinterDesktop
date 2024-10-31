@@ -91,5 +91,105 @@ namespace F2DesktopInterface
         {
             consoleForm = null;
         }
+
+        private void pnFiles_Click(object sender, EventArgs e)
+        {
+            if (filesForm == null)
+            {
+                filesForm = new FilesForm();
+                filesForm.FormClosed += FilesForm_Closed;
+                filesForm.MdiParent = this;
+                filesForm.Dock = DockStyle.Fill;
+                filesForm.Show();
+            }
+            else
+            {
+                filesForm.Activate();
+            }
+        }
+        private void FilesForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            filesForm = null;
+        }
+
+        private void pnHistory_Click(object sender, EventArgs e)
+        {
+            if (historyForm == null)
+            {
+                historyForm = new HistoryForm();
+                historyForm.FormClosed += HistoryForm_Closed;
+                historyForm.MdiParent = this;
+                historyForm.Dock = DockStyle.Fill;
+                historyForm.Show();
+            }
+            else
+            {
+                historyForm.Activate();
+            }
+        }
+        private void HistoryForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            historyForm = null;
+        }
+
+        private void pnManage_Click(object sender, EventArgs e)
+        {
+            if (manageForm == null)
+            {
+                manageForm = new ManageForm();
+                manageForm.FormClosed += ManageForm_Closed;
+                manageForm.MdiParent = this;
+                manageForm.Dock = DockStyle.Fill;
+                manageForm.Show();
+            }
+            else
+            {
+                manageForm.Activate();
+            }
+        }
+        private void ManageForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            manageForm = null;
+        }
+
+        private void pnConfiguration_Click(object sender, EventArgs e)
+        {
+            if (configurationForm == null)
+            {
+                configurationForm = new ConfigurationForm();
+                configurationForm.FormClosed += ConfigurationForm_Closed;
+                configurationForm.MdiParent = this;
+                configurationForm.Dock = DockStyle.Fill;
+                configurationForm.Show();
+            }
+            else
+            {
+                configurationForm.Activate();
+            }
+        }
+        private void ConfigurationForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            configurationForm = null;
+        }
+
+        private void pnSystem_Click(object sender, EventArgs e)
+        {
+            if (systemForm == null)
+            {
+                systemForm = new SystemForm();
+                systemForm.FormClosed += SystemForm_Closed;
+                systemForm.MdiParent = this;
+                systemForm.Dock = DockStyle.Fill;
+                systemForm.Show();
+            }
+            else
+            {
+                systemForm.Activate();
+            }
+        }
+        private void SystemForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            systemForm = null;
+        }
     }
 }

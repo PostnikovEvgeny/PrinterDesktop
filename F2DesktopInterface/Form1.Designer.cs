@@ -123,7 +123,7 @@
             sidebar.Controls.Add(panel13);
             sidebar.Dock = DockStyle.Left;
             sidebar.Location = new Point(0, 24);
-            sidebar.MaximumSize = new Size(271, 717);
+            sidebar.MaximumSize = new Size(271, 0);
             sidebar.MinimumSize = new Size(81, 717);
             sidebar.Name = "sidebar";
             sidebar.Size = new Size(271, 717);
@@ -226,6 +226,7 @@
             pnFiles.Text = "                  Файлы";
             pnFiles.TextAlign = ContentAlignment.MiddleLeft;
             pnFiles.UseVisualStyleBackColor = true;
+            pnFiles.Click += pnFiles_Click;
             // 
             // panel10
             // 
@@ -248,6 +249,7 @@
             pnHistory.Text = "                  История задач";
             pnHistory.TextAlign = ContentAlignment.MiddleLeft;
             pnHistory.UseVisualStyleBackColor = true;
+            pnHistory.Click += pnHistory_Click;
             // 
             // panel11
             // 
@@ -270,6 +272,7 @@
             pnManage.Text = "                  Управление";
             pnManage.TextAlign = ContentAlignment.MiddleLeft;
             pnManage.UseVisualStyleBackColor = true;
+            pnManage.Click += pnManage_Click;
             // 
             // panel12
             // 
@@ -292,6 +295,7 @@
             pnConfiguration.Text = "                  Конфигурация";
             pnConfiguration.TextAlign = ContentAlignment.MiddleLeft;
             pnConfiguration.UseVisualStyleBackColor = true;
+            pnConfiguration.Click += pnConfiguration_Click;
             // 
             // panel13
             // 
@@ -314,6 +318,7 @@
             pnSystem.Text = "                  Система";
             pnSystem.TextAlign = ContentAlignment.MiddleLeft;
             pnSystem.UseVisualStyleBackColor = true;
+            pnSystem.Click += pnSystem_Click;
             // 
             // sideBarTimer
             // 
