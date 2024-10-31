@@ -1,0 +1,17 @@
+D:\Interfaces\Desktop\F2DesktopInterface\bin\Debug\net8.0-windows\F2DesktopInterface.exe
+D:\Interfaces\Desktop\F2DesktopInterface\bin\Debug\net8.0-windows\F2DesktopInterface.deps.json
+D:\Interfaces\Desktop\F2DesktopInterface\bin\Debug\net8.0-windows\F2DesktopInterface.runtimeconfig.json
+D:\Interfaces\Desktop\F2DesktopInterface\bin\Debug\net8.0-windows\F2DesktopInterface.dll
+D:\Interfaces\Desktop\F2DesktopInterface\bin\Debug\net8.0-windows\F2DesktopInterface.pdb
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.Form1.resources
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.csproj.GenerateResource.cache
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.GeneratedMSBuildEditorConfig.editorconfig
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.AssemblyInfoInputs.cache
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.AssemblyInfo.cs
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.csproj.CoreCompileInputs.cache
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.sourcelink.json
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.dll
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\refint\F2DesktopInterface.dll
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.pdb
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.genruntimeconfig.cache
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\ref\F2DesktopInterface.dll

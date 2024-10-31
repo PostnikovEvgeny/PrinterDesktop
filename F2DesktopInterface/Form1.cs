@@ -6,5 +6,10 @@ namespace F2DesktopInterface
         {
             InitializeComponent();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
