@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("F2DesktopInterface")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ece2ad680b4aec632bb0161431ce4c45686e32a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be5f64bfc9f8d62c1cb867208dc4c03f44d83d5f")]
 [assembly: System.Reflection.AssemblyProductAttribute("F2DesktopInterface")]
 [assembly: System.Reflection.AssemblyTitleAttribute("F2DesktopInterface")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
