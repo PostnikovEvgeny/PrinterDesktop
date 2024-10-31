@@ -49,15 +49,6 @@ namespace F2DesktopInterface
             sideBarTimer.Start();
         }
 
-        private void pnDashboard_Click(object sender, EventArgs e)
-        {
-            DashBoardActivate();
-        }
-
-        private void DashboardForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            dashboardForm = null;
-        }
 
         private void DashBoardActivate()
         {
@@ -163,6 +154,16 @@ namespace F2DesktopInterface
             {
                 systemForm.Activate();
             }
+        }
+
+        private void pnDashboard_Click(object sender, EventArgs e)
+        {
+            DashBoardActivate();
+        }
+
+        private void DashboardForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            dashboardForm = null;
         }
 
         private void pnConsole_Click(object sender, EventArgs e)
