@@ -16,3 +16,10 @@ D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInter
 D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.genruntimeconfig.cache
 D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\ref\F2DesktopInterface.dll
 D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.Properties.Resources.resources
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.sideBarForms.ConfigurationForm.resources
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.sideBarForms.ConsoleForm.resources
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.sideBarForms.DashboardForm.resources
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.sideBarForms.FilesForm.resources
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.sideBarForms.HistoryForm.resources
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.sideBarForms.ManageForm.resources
+D:\Interfaces\Desktop\F2DesktopInterface\obj\Debug\net8.0-windows\F2DesktopInterface.sideBarForms.SystemForm.resources

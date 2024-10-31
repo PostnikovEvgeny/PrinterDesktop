@@ -41,24 +41,19 @@
             label1 = new Label();
             menuButton = new PictureBox();
             panel6 = new Panel();
-            button1 = new Button();
+            pnDashboard = new Button();
             panel8 = new Panel();
-            button2 = new Button();
+            pnConsole = new Button();
             panel9 = new Panel();
-            button3 = new Button();
+            pnFiles = new Button();
             panel10 = new Panel();
-            button4 = new Button();
+            pnHistory = new Button();
             panel11 = new Panel();
-            button5 = new Button();
+            pnManage = new Button();
             panel12 = new Panel();
-            button6 = new Button();
+            pnConfiguration = new Button();
             panel13 = new Panel();
-            button7 = new Button();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            panel4 = new Panel();
-            panel5 = new Panel();
+            pnSystem = new Button();
             sideBarTimer = new System.Windows.Forms.Timer(components);
             menuStrip1.SuspendLayout();
             sidebar.SuspendLayout();
@@ -166,197 +161,159 @@
             // 
             // panel6
             // 
-            panel6.Controls.Add(button1);
+            panel6.Controls.Add(pnDashboard);
             panel6.Location = new Point(3, 74);
             panel6.Name = "panel6";
             panel6.Size = new Size(268, 43);
             panel6.TabIndex = 0;
             // 
-            // button1
+            // pnDashboard
             // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(-9, -6);
-            button1.Name = "button1";
-            button1.Padding = new Padding(30, 0, 0, 0);
-            button1.Size = new Size(299, 56);
-            button1.TabIndex = 0;
-            button1.Text = "                  Панель управления";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
+            pnDashboard.FlatStyle = FlatStyle.Flat;
+            pnDashboard.Image = (Image)resources.GetObject("pnDashboard.Image");
+            pnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
+            pnDashboard.Location = new Point(-9, -6);
+            pnDashboard.Name = "pnDashboard";
+            pnDashboard.Padding = new Padding(30, 0, 0, 0);
+            pnDashboard.Size = new Size(299, 56);
+            pnDashboard.TabIndex = 0;
+            pnDashboard.Text = "                  Панель управления";
+            pnDashboard.TextAlign = ContentAlignment.MiddleLeft;
+            pnDashboard.UseVisualStyleBackColor = true;
+            pnDashboard.Click += pnDashboard_Click;
             // 
             // panel8
             // 
-            panel8.Controls.Add(button2);
+            panel8.Controls.Add(pnConsole);
             panel8.Location = new Point(3, 123);
             panel8.Name = "panel8";
             panel8.Size = new Size(268, 43);
             panel8.TabIndex = 1;
             // 
-            // button2
+            // pnConsole
             // 
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(-9, -6);
-            button2.Name = "button2";
-            button2.Padding = new Padding(30, 0, 0, 0);
-            button2.Size = new Size(299, 56);
-            button2.TabIndex = 0;
-            button2.Text = "                  Консоль";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = true;
+            pnConsole.FlatStyle = FlatStyle.Flat;
+            pnConsole.Image = (Image)resources.GetObject("pnConsole.Image");
+            pnConsole.ImageAlign = ContentAlignment.MiddleLeft;
+            pnConsole.Location = new Point(-9, -6);
+            pnConsole.Name = "pnConsole";
+            pnConsole.Padding = new Padding(30, 0, 0, 0);
+            pnConsole.Size = new Size(299, 56);
+            pnConsole.TabIndex = 0;
+            pnConsole.Text = "                  Консоль";
+            pnConsole.TextAlign = ContentAlignment.MiddleLeft;
+            pnConsole.UseVisualStyleBackColor = true;
+            pnConsole.Click += pnConsole_Click;
             // 
             // panel9
             // 
-            panel9.Controls.Add(button3);
+            panel9.Controls.Add(pnFiles);
             panel9.Location = new Point(3, 172);
             panel9.Name = "panel9";
             panel9.Size = new Size(268, 43);
             panel9.TabIndex = 2;
             // 
-            // button3
+            // pnFiles
             // 
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(-9, -6);
-            button3.Name = "button3";
-            button3.Padding = new Padding(30, 0, 0, 0);
-            button3.Size = new Size(299, 56);
-            button3.TabIndex = 0;
-            button3.Text = "                  Файлы";
-            button3.TextAlign = ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = true;
+            pnFiles.FlatStyle = FlatStyle.Flat;
+            pnFiles.Image = (Image)resources.GetObject("pnFiles.Image");
+            pnFiles.ImageAlign = ContentAlignment.MiddleLeft;
+            pnFiles.Location = new Point(-9, -6);
+            pnFiles.Name = "pnFiles";
+            pnFiles.Padding = new Padding(30, 0, 0, 0);
+            pnFiles.Size = new Size(299, 56);
+            pnFiles.TabIndex = 0;
+            pnFiles.Text = "                  Файлы";
+            pnFiles.TextAlign = ContentAlignment.MiddleLeft;
+            pnFiles.UseVisualStyleBackColor = true;
             // 
             // panel10
             // 
-            panel10.Controls.Add(button4);
+            panel10.Controls.Add(pnHistory);
             panel10.Location = new Point(3, 221);
             panel10.Name = "panel10";
             panel10.Size = new Size(268, 43);
             panel10.TabIndex = 3;
             // 
-            // button4
+            // pnHistory
             // 
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(-9, -6);
-            button4.Name = "button4";
-            button4.Padding = new Padding(30, 0, 0, 0);
-            button4.Size = new Size(299, 56);
-            button4.TabIndex = 0;
-            button4.Text = "                  История задач";
-            button4.TextAlign = ContentAlignment.MiddleLeft;
-            button4.UseVisualStyleBackColor = true;
+            pnHistory.FlatStyle = FlatStyle.Flat;
+            pnHistory.Image = (Image)resources.GetObject("pnHistory.Image");
+            pnHistory.ImageAlign = ContentAlignment.MiddleLeft;
+            pnHistory.Location = new Point(-9, -6);
+            pnHistory.Name = "pnHistory";
+            pnHistory.Padding = new Padding(30, 0, 0, 0);
+            pnHistory.Size = new Size(299, 56);
+            pnHistory.TabIndex = 0;
+            pnHistory.Text = "                  История задач";
+            pnHistory.TextAlign = ContentAlignment.MiddleLeft;
+            pnHistory.UseVisualStyleBackColor = true;
             // 
             // panel11
             // 
-            panel11.Controls.Add(button5);
+            panel11.Controls.Add(pnManage);
             panel11.Location = new Point(3, 270);
             panel11.Name = "panel11";
             panel11.Size = new Size(268, 43);
             panel11.TabIndex = 4;
             // 
-            // button5
+            // pnManage
             // 
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(-9, -6);
-            button5.Name = "button5";
-            button5.Padding = new Padding(30, 0, 0, 0);
-            button5.Size = new Size(299, 56);
-            button5.TabIndex = 0;
-            button5.Text = "                  Управление";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = true;
+            pnManage.FlatStyle = FlatStyle.Flat;
+            pnManage.Image = (Image)resources.GetObject("pnManage.Image");
+            pnManage.ImageAlign = ContentAlignment.MiddleLeft;
+            pnManage.Location = new Point(-9, -6);
+            pnManage.Name = "pnManage";
+            pnManage.Padding = new Padding(30, 0, 0, 0);
+            pnManage.Size = new Size(299, 56);
+            pnManage.TabIndex = 0;
+            pnManage.Text = "                  Управление";
+            pnManage.TextAlign = ContentAlignment.MiddleLeft;
+            pnManage.UseVisualStyleBackColor = true;
             // 
             // panel12
             // 
-            panel12.Controls.Add(button6);
+            panel12.Controls.Add(pnConfiguration);
             panel12.Location = new Point(3, 319);
             panel12.Name = "panel12";
             panel12.Size = new Size(268, 43);
             panel12.TabIndex = 5;
             // 
-            // button6
+            // pnConfiguration
             // 
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.ImageAlign = ContentAlignment.MiddleLeft;
-            button6.Location = new Point(-9, -6);
-            button6.Name = "button6";
-            button6.Padding = new Padding(30, 0, 0, 0);
-            button6.Size = new Size(299, 56);
-            button6.TabIndex = 0;
-            button6.Text = "                  Конфигурация";
-            button6.TextAlign = ContentAlignment.MiddleLeft;
-            button6.UseVisualStyleBackColor = true;
+            pnConfiguration.FlatStyle = FlatStyle.Flat;
+            pnConfiguration.Image = (Image)resources.GetObject("pnConfiguration.Image");
+            pnConfiguration.ImageAlign = ContentAlignment.MiddleLeft;
+            pnConfiguration.Location = new Point(-9, -6);
+            pnConfiguration.Name = "pnConfiguration";
+            pnConfiguration.Padding = new Padding(30, 0, 0, 0);
+            pnConfiguration.Size = new Size(299, 56);
+            pnConfiguration.TabIndex = 0;
+            pnConfiguration.Text = "                  Конфигурация";
+            pnConfiguration.TextAlign = ContentAlignment.MiddleLeft;
+            pnConfiguration.UseVisualStyleBackColor = true;
             // 
             // panel13
             // 
-            panel13.Controls.Add(button7);
+            panel13.Controls.Add(pnSystem);
             panel13.Location = new Point(3, 368);
             panel13.Name = "panel13";
             panel13.Size = new Size(268, 43);
             panel13.TabIndex = 6;
             // 
-            // button7
+            // pnSystem
             // 
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(-9, -6);
-            button7.Name = "button7";
-            button7.Padding = new Padding(30, 0, 0, 0);
-            button7.Size = new Size(299, 56);
-            button7.TabIndex = 0;
-            button7.Text = "                  Система";
-            button7.TextAlign = ContentAlignment.MiddleLeft;
-            button7.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Location = new Point(292, 56);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(414, 276);
-            panel1.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Location = new Point(737, 56);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(414, 276);
-            panel2.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            panel3.BorderStyle = BorderStyle.FixedSingle;
-            panel3.Location = new Point(292, 366);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(414, 276);
-            panel3.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            panel4.BorderStyle = BorderStyle.FixedSingle;
-            panel4.Location = new Point(737, 366);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(200, 276);
-            panel4.TabIndex = 3;
-            // 
-            // panel5
-            // 
-            panel5.BorderStyle = BorderStyle.FixedSingle;
-            panel5.Location = new Point(951, 366);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(200, 276);
-            panel5.TabIndex = 4;
+            pnSystem.FlatStyle = FlatStyle.Flat;
+            pnSystem.Image = (Image)resources.GetObject("pnSystem.Image");
+            pnSystem.ImageAlign = ContentAlignment.MiddleLeft;
+            pnSystem.Location = new Point(-9, -6);
+            pnSystem.Name = "pnSystem";
+            pnSystem.Padding = new Padding(30, 0, 0, 0);
+            pnSystem.Size = new Size(299, 56);
+            pnSystem.TabIndex = 0;
+            pnSystem.Text = "                  Система";
+            pnSystem.TextAlign = ContentAlignment.MiddleLeft;
+            pnSystem.UseVisualStyleBackColor = true;
             // 
             // sideBarTimer
             // 
@@ -368,14 +325,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1246, 741);
-            Controls.Add(panel5);
-            Controls.Add(panel4);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
             Controls.Add(sidebar);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Управление принтером F2-Lite";
@@ -405,26 +358,21 @@
         private ToolStripMenuItem руководствоПользователяToolStripMenuItem;
         private ToolStripMenuItem выходToolStripMenuItem;
         private FlowLayoutPanel sidebar;
-        private Panel panel1;
-        private Panel panel2;
-        private Panel panel3;
-        private Panel panel4;
-        private Panel panel5;
         private Panel panel6;
-        private Button button1;
+        private Button pnDashboard;
         private Panel panel7;
         private Panel panel8;
-        private Button button2;
+        private Button pnConsole;
         private Panel panel9;
-        private Button button3;
+        private Button pnFiles;
         private Panel panel10;
-        private Button button4;
+        private Button pnHistory;
         private Panel panel11;
-        private Button button5;
+        private Button pnManage;
         private Panel panel12;
-        private Button button6;
+        private Button pnConfiguration;
         private Panel panel13;
-        private Button button7;
+        private Button pnSystem;
         private PictureBox menuButton;
         private Label label1;
         private System.Windows.Forms.Timer sideBarTimer;
