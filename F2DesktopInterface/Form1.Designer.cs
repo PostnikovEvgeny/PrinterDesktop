@@ -74,7 +74,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1246, 24);
+            menuStrip1.Size = new Size(1391, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -126,7 +126,7 @@
             sidebar.MaximumSize = new Size(271, 0);
             sidebar.MinimumSize = new Size(81, 717);
             sidebar.Name = "sidebar";
-            sidebar.Size = new Size(271, 717);
+            sidebar.Size = new Size(271, 807);
             sidebar.TabIndex = 1;
             // 
             // panel7
@@ -141,6 +141,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F);
             label1.Location = new Point(64, 25);
             label1.Name = "label1";
             label1.Size = new Size(56, 15);
@@ -330,7 +331,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1246, 741);
+            ClientSize = new Size(1391, 831);
             Controls.Add(sidebar);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");

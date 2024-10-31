@@ -28,34 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            checkBox1 = new CheckBox();
+            panel1 = new Panel();
             SuspendLayout();
             // 
-            // checkBox1
+            // panel1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(376, 183);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(83, 19);
-            checkBox1.TabIndex = 0;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Location = new Point(48, 59);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(740, 695);
+            panel1.TabIndex = 0;
             // 
             // ConsoleForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(checkBox1);
+            ClientSize = new Size(1119, 806);
+            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ConsoleForm";
             Text = "ConsoleForm";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private CheckBox checkBox1;
+        private Panel panel1;
     }
 }
