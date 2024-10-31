@@ -337,6 +337,7 @@
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Управление принтером F2-Lite";
+            Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             sidebar.ResumeLayout(false);

@@ -23,8 +23,6 @@ namespace F2DesktopInterface
         private void sideBarTimer_Tick(object sender, EventArgs e)
         {
 
-
-
             if (sideBarExpand)
             {
                 sidebar.Width -= 10;
@@ -53,6 +51,16 @@ namespace F2DesktopInterface
 
         private void pnDashboard_Click(object sender, EventArgs e)
         {
+            DashBoardActivate();
+        }
+
+        private void DashboardForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            dashboardForm = null;
+        }
+
+        private void DashBoardActivate()
+        {
             if (dashboardForm == null)
             {
                 dashboardForm = new DashboardForm();
@@ -66,13 +74,7 @@ namespace F2DesktopInterface
                 dashboardForm.Activate();
             }
         }
-
-        private void DashboardForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            dashboardForm = null;
-        }
-
-        private void pnConsole_Click(object sender, EventArgs e)
+        private void ConsoleActivate()
         {
             if (consoleForm == null)
             {
@@ -87,12 +89,7 @@ namespace F2DesktopInterface
                 consoleForm.Activate();
             }
         }
-        private void consoleForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            consoleForm = null;
-        }
-
-        private void pnFiles_Click(object sender, EventArgs e)
+        private void FilesActivate()
         {
             if (filesForm == null)
             {
@@ -107,12 +104,7 @@ namespace F2DesktopInterface
                 filesForm.Activate();
             }
         }
-        private void FilesForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            filesForm = null;
-        }
-
-        private void pnHistory_Click(object sender, EventArgs e)
+        private void HistoryActivate()
         {
             if (historyForm == null)
             {
@@ -127,12 +119,7 @@ namespace F2DesktopInterface
                 historyForm.Activate();
             }
         }
-        private void HistoryForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            historyForm = null;
-        }
-
-        private void pnManage_Click(object sender, EventArgs e)
+        private void ManageActivate()
         {
             if (manageForm == null)
             {
@@ -147,12 +134,7 @@ namespace F2DesktopInterface
                 manageForm.Activate();
             }
         }
-        private void ManageForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            manageForm = null;
-        }
-
-        private void pnConfiguration_Click(object sender, EventArgs e)
+        private void ConfigurationActivate()
         {
             if (configurationForm == null)
             {
@@ -167,12 +149,7 @@ namespace F2DesktopInterface
                 configurationForm.Activate();
             }
         }
-        private void ConfigurationForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            configurationForm = null;
-        }
-
-        private void pnSystem_Click(object sender, EventArgs e)
+        private void SystemActivate()
         {
             if (systemForm == null)
             {
@@ -187,9 +164,64 @@ namespace F2DesktopInterface
                 systemForm.Activate();
             }
         }
+
+        private void pnConsole_Click(object sender, EventArgs e)
+        {
+            ConsoleActivate();
+        }
+        private void consoleForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            consoleForm = null;
+        }
+
+        private void pnFiles_Click(object sender, EventArgs e)
+        {
+            FilesActivate();
+        }
+        private void FilesForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            filesForm = null;
+        }
+
+        private void pnHistory_Click(object sender, EventArgs e)
+        {
+            HistoryActivate();
+        }
+        private void HistoryForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            historyForm = null;
+        }
+
+        private void pnManage_Click(object sender, EventArgs e)
+        {
+            ManageActivate();
+        }
+        private void ManageForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            manageForm = null;
+        }
+
+        private void pnConfiguration_Click(object sender, EventArgs e)
+        {
+            ConfigurationActivate();
+        }
+        private void ConfigurationForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            configurationForm = null;
+        }
+
+        private void pnSystem_Click(object sender, EventArgs e)
+        {
+            SystemActivate();
+        }
         private void SystemForm_Closed(object sender, FormClosedEventArgs e)
         {
             systemForm = null;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DashBoardActivate();
         }
     }
 }
